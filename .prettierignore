@@ -1,0 +1,10 @@
+pnpm-lock.yaml
+next-env.d.ts
+README.md
+README.*
+*.README.*
+**/.next
+**/.turbo
+**/storybook-static
+*.tsbuildinfo
+eslintcache
