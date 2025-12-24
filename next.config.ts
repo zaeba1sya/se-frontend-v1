@@ -1,10 +1,7 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
-  images: {
-    remotePatterns: [new URL('https://sakhelectric.ru/**')]
-  }
+  output: 'standalone'
 }
 
 export default nextConfig

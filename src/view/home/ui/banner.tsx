@@ -7,7 +7,7 @@ function HomeBanner() {
       <div className="grid gap-6 md:grid-cols-2">
         <div className="group relative h-64 cursor-pointer overflow-hidden rounded-2xl">
           <Image
-            src="https://sakhelectric.ru/upload/iblock/627/627678f90a3e1f883f98c3790b812cc2.jpg"
+            src="/banner1.jpg"
             alt="Laptop promo"
             fill
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -32,7 +32,7 @@ function HomeBanner() {
 
         <div className="group relative h-64 cursor-pointer overflow-hidden rounded-2xl">
           <Image
-            src="https://sakhelectric.ru/upload/iblock/32a/32a0c8e206a9927dd7137988132e2daf.jpg"
+            src="/banner2.jpg"
             alt="Fashion promo"
             fill
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"

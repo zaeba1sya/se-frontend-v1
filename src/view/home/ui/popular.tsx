@@ -6,44 +6,37 @@ const categories = [
   {
     id: 1,
     name: 'Магнитные пускатели',
-    image:
-      'https://sakhelectric.ru/upload/iblock/4b7/t7jw59g2cqyqccu2pgpeot2nfcmpwa41.jpeg'
+    image: '/item1.jpeg'
   },
   {
     id: 2,
     name: 'Теплый пол',
-    image:
-      'https://sakhelectric.ru/upload/iblock/f58/6hqlaix5klod92lm2ud0tij7mps82utn.jpeg'
+    image: '/item2.jpeg'
   },
   {
     id: 3,
     name: 'Кнопки управления',
-    image:
-      'https://sakhelectric.ru/upload/iblock/0de/e9omyomrakwgcrrqm16i0s3taj91iswe.jpeg'
+    image: '/item3.jpeg'
   },
   {
     id: 4,
     name: 'Электроконвекторы',
-    image:
-      'https://sakhelectric.ru/upload/iblock/d98/e5dshcfby163yzhweoqgs7loxnmrf168.jpeg'
+    image: '/item4.jpeg'
   },
   {
     id: 5,
     name: 'Таймер времени',
-    image:
-      'https://sakhelectric.ru/upload/iblock/ecf/qjaeksyq47afcab1lo1qvnrf301bl0tu.jpeg'
+    image: '/item5.jpeg'
   },
   {
     id: 6,
     name: 'Сварочные аппараты',
-    image:
-      'https://sakhelectric.ru/upload/iblock/976/ya2e5znknl8dkfo014ew9a4fg9u0rr3h.jpeg'
+    image: '/item6.jpeg'
   },
   {
     id: 7,
     name: 'Ограничители мощности',
-    image:
-      'https://sakhelectric.ru/upload/iblock/07b/xcs07jwaa4bx2pk988psrzzb9677ad4w.png'
+    image: '/item7.png'
   },
   {
     id: 8,
