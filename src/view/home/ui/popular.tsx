@@ -6,37 +6,37 @@ const categories = [
   {
     id: 1,
     name: 'Магнитные пускатели',
-    image: '/item1.jpeg'
+    image: './item1.jpeg'
   },
   {
     id: 2,
     name: 'Теплый пол',
-    image: '/item2.jpeg'
+    image: './item2.jpeg'
   },
   {
     id: 3,
     name: 'Кнопки управления',
-    image: '/item3.jpeg'
+    image: './item3.jpeg'
   },
   {
     id: 4,
     name: 'Электроконвекторы',
-    image: '/item4.jpeg'
+    image: './item4.jpeg'
   },
   {
     id: 5,
     name: 'Таймер времени',
-    image: '/item5.jpeg'
+    image: './item5.jpeg'
   },
   {
     id: 6,
     name: 'Сварочные аппараты',
-    image: '/item6.jpeg'
+    image: './item6.jpeg'
   },
   {
     id: 7,
     name: 'Ограничители мощности',
-    image: '/item7.png'
+    image: './item7.png'
   },
   {
     id: 8,
