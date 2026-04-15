@@ -1,0 +1,5 @@
+export { AccountLayout } from './ui/account-layout'
+export { AddressesView } from './ui/addresses-view'
+export { FavoritesView } from './ui/favorites-view'
+export { OrdersView } from './ui/orders-view'
+export { ProfileView } from './ui/profile-view'

@@ -1,52 +1,29 @@
-import { ChevronDown } from 'lucide-react'
-import Image from 'next/image'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger
-} from 'shared/ui/dropdown-menu'
-import { LOGO_LINKS } from '../lib/constants'
 import Link from 'next/link'
-import { HeaderThemeSwitcher } from './theme-switcher'
+import { Zap } from 'lucide-react'
 
-function HeaderLogo() {
+import { ROUTES } from 'shared/lib/constants/routes'
+
+export function Logo() {
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger>
-        <div className="flex cursor-pointer flex-row items-center justify-center gap-2">
-          <Image
-            src={'./logo.svg'}
-            width={40}
-            height={40}
-            quality={100}
-            alt="sakhelectro-logo"
-          />
-          <div className="flex flex-row items-center gap-3">
-            <span className="text-xl">Sakhelectrik</span>
-            <ChevronDown width={13} height={13} />
-          </div>
-        </div>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="mt-0.5 flex w-48 flex-col gap-3">
-        {LOGO_LINKS.map(({ label: ll, items }, idx) => (
-          <div key={idx}>
-            <DropdownMenuLabel>{ll}</DropdownMenuLabel>
-            {items.map(({ label: il, href }, idxi) => (
-              <Link href={href} key={idxi}>
-                <DropdownMenuItem className="ml-2 cursor-pointer">
-                  {il}
-                </DropdownMenuItem>
-              </Link>
-            ))}
-          </div>
-        ))}
-
-        <HeaderThemeSwitcher />
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Link
+      href={ROUTES.HOME}
+      className="group flex items-center gap-2.5"
+      aria-label="Сахэлектрик, на главную"
+    >
+      <span
+        className="bg-primary/10 text-primary ring-primary/20 relative flex size-9 items-center justify-center rounded-xl ring-1 transition-all group-hover:ring-primary/40"
+        aria-hidden="true"
+      >
+        <Zap className="size-5" strokeWidth={2.4} />
+      </span>
+      <span className="flex flex-col leading-none">
+        <span className="text-foreground text-[15px] font-semibold tracking-tight">
+          Сахэлектрик
+        </span>
+        <span className="text-muted-foreground text-[11px] font-medium">
+          электромаркет Сахалина
+        </span>
+      </span>
+    </Link>
   )
 }
-
-export { HeaderLogo }

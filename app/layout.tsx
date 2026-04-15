@@ -1,12 +1,49 @@
-import { Space_Grotesk } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter, Space_Grotesk } from 'next/font/google'
+
 import './globals.css'
-import { Header } from 'widget/header'
+
 import { ThemeProvider } from 'app/providers/theme'
+import { Footer } from 'widget/footer'
+import { Header } from 'widget/header'
+
+const inter = Inter({
+  variable: '--font-sans',
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap'
+})
 
 const spaceGrotesk = Space_Grotesk({
-  variable: '--font-space-grotesk',
-  subsets: ['latin']
+  variable: '--font-display',
+  subsets: ['latin'],
+  display: 'swap'
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Сахэлектрик — электромаркет Сахалина',
+    template: '%s | Сахэлектрик'
+  },
+  description:
+    'Электротехника, освещение, тёплые полы, инструмент и услуги аттестованной электролаборатории. Доставка по всей Сахалинской области.',
+  keywords: [
+    'электрика',
+    'сахэлектрик',
+    'электромаркет',
+    'сахалин',
+    'южно-сахалинск',
+    'электролаборатория'
+  ]
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { color: '#fafafa', media: '(prefers-color-scheme: light)' },
+    { color: '#0a0a0b', media: '(prefers-color-scheme: dark)' }
+  ],
+  width: 'device-width',
+  initialScale: 1
+}
 
 export default function RootLayout({
   children
@@ -14,16 +51,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ru" suppressHydrationWarning>
       <body
-        className={`${spaceGrotesk.variable} animate-gradient min-h-screen antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} min-h-screen antialiased`}
       >
         <ThemeProvider>
-          <div className="relative z-10 mb-4">
+          <div className="flex min-h-screen flex-col">
             <Header />
-            <div className="mx-auto min-h-screen w-full max-w-[98.5vw] rounded-3xl bg-white">
-              {children}
-            </div>
+            <main className="flex-1">{children}</main>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
